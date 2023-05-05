@@ -17,7 +17,7 @@ form.addEventListener("submit", function (event) {
     console.log(taskList)
 })
 
-function displayTask(task) {
+/*function displayTask(task) {
     let item = document.createElement("li");
     item.setAttribute("data-id", task.id);
     item.innerHTML = `<p><strong>${task.name}</strong><br>${task.type}</p>`;
@@ -51,10 +51,17 @@ function displayTask(task) {
     })
 
 
+}*/
+
+function displayTasks() {
+    tasklist.innerHTML = "";
+
+    let localTasks = JSON.parse(localStorage.getItem('tasks'));
+
+    if (localTasks !== null) {
+        
+    }
 }
-
-
-
 
 // Create an object called 'task'
 // Populate the properties based on the provided data model
@@ -110,7 +117,6 @@ function addTask(name, type, rate, time, client) {
 
     taskList.push(task);
     displayTask(task);
-
 }
 
 // Call the function with test values for the input paramaters
